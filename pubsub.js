@@ -16,8 +16,7 @@ class PubSub {
         this.pubnub = new PubNub(credentials);
         this.blockchain = blockchain;
         this.pubnub.subscribe({ channels: Object.values(CHANNELS) });
-         this.pubnub.addListener(this.listener());
-             
+        this.pubnub.addListener(this.listener());
     }
 
     listener(){
